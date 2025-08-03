@@ -216,6 +216,7 @@
     text-wrap: pretty;
   }
 
+<<<<<<< HEAD
   /* Text truncation utilities */
   .line-clamp-1 {
     overflow: hidden;
@@ -259,6 +260,8 @@
     -webkit-line-clamp: 6;
   }
 
+=======
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
   /* Gradient backgrounds */
   .bg-gradient-hero {
     background: linear-gradient(135deg, #9C89B8 0%, #F0A6CA 100%);

@@ -41,6 +41,7 @@ import {
   Play,
   Pause,
   SkipForward,
+<<<<<<< HEAD
   SkipBack,
   DollarSign,
   Calendar,
@@ -62,6 +63,9 @@ import {
   X,
   Menu,
   X as Close
+=======
+  SkipBack
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
 } from "lucide-react";
 import Link from 'next/link';
 import { projects } from "../lib/projects";
@@ -184,6 +188,7 @@ const statistics = [
   { number: "99%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> }
 ];
 
+<<<<<<< HEAD
 const achievements = [
   {
     title: "ISO 27001 Certified",
@@ -211,6 +216,8 @@ const achievements = [
   }
 ];
 
+=======
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
 const testimonials = [
   {
     name: "Himanshu Jain",
@@ -265,6 +272,7 @@ const team = [
   },
 ];
 
+<<<<<<< HEAD
 const clientLogos = [
   { name: "Tree Nuts", logo: "🌰", category: "E-commerce" },
   { name: "NikkiFashion", logo: "👗", category: "Fashion" },
@@ -443,6 +451,8 @@ const faqs = [
   }
 ];
 
+=======
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
 function Typewriter({ texts, speed = 50, pause = 2000 }: { texts: string[], speed?: number, pause?: number }) {
   const [displayed, setDisplayed] = useState("");
   const [index, setIndex] = useState(0);
@@ -618,6 +628,7 @@ function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
+<<<<<<< HEAD
   // Animated counter for statistics
   const [counts, setCounts] = useState({ projects: 0, clients: 0, experience: 0, satisfaction: 0 });
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -666,6 +677,8 @@ function Hero() {
     }, stepDuration);
   };
 
+=======
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
   return (
     <motion.section
       ref={containerRef}
@@ -768,7 +781,11 @@ function Hero() {
             Shivkara Digitals
           </span>
           <br />
+<<<<<<< HEAD
           <span className="text-gray-900">Professional Software Solutions</span>
+=======
+          <span className="text-gray-900">Your Technology Partner</span>
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
         </motion.h1>
 
         <motion.p
@@ -779,9 +796,15 @@ function Hero() {
         >
           <Typewriter
             texts={[
+<<<<<<< HEAD
               "Enterprise-grade software solutions starting from ₹7,000.",
               "Complete digital transformation with website + mobile apps.",
               "ISO 27001 certified with Microsoft, AWS & Google Cloud partnerships."
+=======
+              "We deliver custom software solutions that transform businesses.",
+              "From e-commerce platforms to enterprise systems, we build it all.",
+              "Let's accelerate your digital transformation journey."
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
             ]}
             speed={50}
             pause={2000}
@@ -820,6 +843,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
         >
+<<<<<<< HEAD
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
@@ -879,6 +903,25 @@ function Hero() {
             <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">{counts.satisfaction}%</div>
             <div className="text-sm text-gray-600">Client Satisfaction</div>
           </motion.div>
+=======
+          {statistics.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2 + index * 0.1, duration: 0.6 }}
+            >
+              <div className="flex justify-center mb-2">
+                <div className="w-12 h-12 bg-gradient-to-br from-lavender to-pink rounded-full flex items-center justify-center text-white">
+                  {stat.icon}
+                </div>
+              </div>
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-1">{stat.number}</div>
+              <div className="text-sm text-gray-600">{stat.label}</div>
+            </motion.div>
+          ))}
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
         </motion.div>
       </div>
 
@@ -1254,6 +1297,7 @@ function Testimonials() {
   );
 }
 
+<<<<<<< HEAD
 function ClientLogos() {
   return (
     <motion.section
@@ -1303,6 +1347,8 @@ function ClientLogos() {
   );
 }
 
+=======
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
 function Team() {
   return (
     <motion.section
@@ -1568,6 +1614,7 @@ function Contact() {
   );
 }
 
+<<<<<<< HEAD
 function Achievements() {
   return (
     <motion.section
@@ -1618,6 +1665,8 @@ function Achievements() {
   );
 }
 
+=======
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
 function Features() {
   const features = [
     {
@@ -1710,6 +1759,7 @@ function Features() {
   );
 }
 
+<<<<<<< HEAD
 function SpecialOffers() {
   return (
     <motion.section
@@ -2079,6 +2129,8 @@ function FAQ() {
   );
 }
 
+=======
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
 function CallToAction() {
   return (
     <motion.section
@@ -2295,6 +2347,7 @@ function Footer() {
   );
 }
 
+<<<<<<< HEAD
 function FloatingActionButton() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -2392,12 +2445,18 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       <LoadingScreen />
+=======
+export default function HomePage() {
+  return (
+    <div className="min-h-screen">
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
       <Header />
       <Hero />
       <TechnologyStack />
       <Process />
       <Services />
       <Features />
+<<<<<<< HEAD
       <Achievements />
       <Projects />
       <Testimonials />
@@ -2411,6 +2470,14 @@ export default function HomePage() {
       <CallToAction />
       <Footer />
       <FloatingActionButton />
+=======
+      <Projects />
+      <Testimonials />
+      <Team />
+      <Contact />
+      <CallToAction />
+      <Footer />
+>>>>>>> 72cb9647d967f4866fdce885a21eb2a9e2b77d06
     </div>
   );
 }
